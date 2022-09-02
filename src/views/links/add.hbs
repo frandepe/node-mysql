@@ -1,0 +1,45 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <img
+            src="/img/logoadd.png"
+            alt="logo"
+            class="card-img-top mx-auto d-block m-2 rounded-circle w-50"
+          />
+          <form action="/links/add" method="POST">
+            <div class="input-group mb-3">
+              <input
+                class="form-control"
+                type="text"
+                name="title"
+                placeholder="Title"
+                autofocus
+              />
+            </div>
+            <div class="input-group mb-3">
+              <input
+                class="form-control"
+                type="url"
+                name="url"
+                placeholder="Url"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <textarea
+                name="description"
+                class="form-control"
+                rows="2"
+                placeholder="Description"
+              ></textarea>
+            </div>
+            <div class="input-group mb-3">
+              <button class="btn btn-primary btn-block col-12">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

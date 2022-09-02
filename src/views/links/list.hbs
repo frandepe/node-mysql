@@ -1,0 +1,45 @@
+<div class="container p-4 table-responsive">
+  {{#if links}}
+    <table class="table table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Links</th>
+          <th scope="col">Description</th>
+          <th scope="col">Timestamp</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+
+        </tr>
+      </thead>
+      {{#each links}}
+        <tbody>
+          <tr>
+            <th scope="row">
+              <a href="{{url}}" target="_blank" class="list__title">
+                <h3 class="card-title text-uppercase">
+                  {{title}}
+                </h3>
+              </a></th>
+            <td><p class="m-2">{{description}}</p></td>
+            <td><p>{{timeago created_at}}</p></td>
+            <td><a href="/links/edit/{{id}}" class="btn btn-secondary"><i
+                  class="fa-solid fa-pen-to-square"
+                ></i></a></td>
+            <td><a href="/links/delete/{{id}}" class="btn btn-danger"><i
+                  class="fa-solid fa-trash"
+                ></i></a></td>
+          </tr>
+        </tbody>
+
+      {{/each}}
+    </table>
+  {{else}}
+    <div class="col-md-4 mx-auto">
+      <div class="card card-body text-center links__createOne">
+        <p>You don't have links</p>
+        <a href="/links/add">Create One!</a>
+      </div>
+    </div>
+  {{/if}}
+
+</div>
